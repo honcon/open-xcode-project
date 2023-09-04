@@ -1,0 +1,52 @@
+{
+    "name": "open-xcode-project",
+    "displayName": "Open Xcode Project",
+    "description": "An extension to open Xcode projects and workspaces from the context menu.",
+    "version": "1.0.0",
+    "publisher": "honcon",
+    "repository": "https://github.com/honcon/open-xcode-project",
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.openXcodeProject"
+    ],
+    "main": "./extension.js",
+    "contributes": {
+        "menus": {
+            "commandPalette": [
+                {
+                    "command": "extension.openXcodeProject",
+                    "when": "false"
+                }
+            ],
+            "explorer/context": [
+                {
+                    "command": "extension.openXcodeProject",
+                    "group": "navigation",
+                    "when": "explorerResourceIsFolder && resourceFilename =~ /.*\\.xcodeproj$/"
+                },
+                {
+                    "command": "extension.openXcodeProject",
+                    "group": "navigation",
+                    "when": "explorerResourceIsFolder && resourceFilename =~ /.*\\.xcworkspace$/"
+                }
+            ]
+        },
+        "commands": [
+            {
+                "command": "extension.openXcodeProject",
+                "title": "Open with Xcode"
+            }
+        ]
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "devDependencies": {
+        "vscode": "^1.1.37"
+    }
+}
