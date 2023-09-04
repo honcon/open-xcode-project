@@ -3,7 +3,7 @@
     "displayName": "Open Xcode Project",
     "description": "An extension to open Xcode projects and workspaces from the context menu.",
     "version": "1.0.0",
-    "publisher": "honcon",
+    "publisher": "Squarelogic",
     "repository": "https://github.com/honcon/open-xcode-project",
     "engines": {
         "vscode": "^1.0.0"
