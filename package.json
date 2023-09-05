@@ -2,7 +2,7 @@
     "name": "open-xcode-project",
     "displayName": "Open Xcode Project",
     "description": "An extension to open Xcode projects and workspaces from the context menu.",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "Squarelogic",
     "repository": "https://github.com/honcon/open-xcode-project",
     "engines": {
@@ -43,7 +43,7 @@
             }
         ]
     },
-    "images": "images/product-icon.svg",
+    "icon": "images/icon.png",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
