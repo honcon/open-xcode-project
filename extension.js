@@ -9,7 +9,8 @@ module.exports = {
             if (fileUri && fileUri.fsPath) {
                 const filePath = fileUri.fsPath;
                 const extname = path.extname(filePath);
-                if (extname === '.xcodeproj' || extname === '.xcworkspace') {
+                const basename = path.basename(filePath);
+                if (extname === '.xcodeproj' || extname === '.xcworkspace' || basename === 'Package.swift') {
                     const command = 'open -a Xcode ' + filePath;
                     child_process.exec(command, (error, stdout, stderr) => {
                         if (error) {
